@@ -1,6 +1,6 @@
 Background Processing in Django
 ===
-Demo files for the talk I gave in #pyconmy2015
+Demo files for the talk I gave in #pyconmy2015.
 Slides can be accessed here: http://www.slideshare.net/kokhoor/background-processing-pycon-my-2015
 
 Assumption(s):
