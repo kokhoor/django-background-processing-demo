@@ -1,0 +1,74 @@
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Website Title & Description for Search Engine purposes -->
+    <title>Contact Us</title>
+    <meta name="description" content="">
+
+    <!-- Mobile viewport optimized -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+</head>
+<body>
+<div class="container">
+    {% if message %}
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+    {% endif %}
+    <div class="page-header">
+        <h1>{% bootstrap_icon "earphone" %} Contact Us</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <form action="/" method="post">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                {% buttons %}
+                    <button type="submit" class="btn btn-info" name="submit" value="synchronous">
+                        {% bootstrap_icon "minus" %} synchronous
+                    </button>
+                    <button type="submit" class="btn btn-primary" name="submit" value="django-background-tasks">
+                        {% bootstrap_icon "plus" %} django-background-tasks
+                    </button>
+                    <button type="submit" class="btn btn-success" name="submit" value="rq">
+                        {% bootstrap_icon "star" %} rq
+                    </button>
+                {% endbuttons %}
+            </form>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Information</h3>
+                </div>
+                <div class="panel-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id libero diam. Curabitur vel
+                        vestibulum nibh. Phasellus iaculis malesuada lobortis. Vivamus vitae pellentesque neque. Donec
+                        vestibulum eu eros a molestie. Cras molestie ante justo, non ultrices mi molestie in. In est
+                        dolor, ultrices vitae mi a, mollis pretium enim. Integer semper arcu tincidunt elit tincidunt, a
+                        pretium ante tristique. Ut venenatis iaculis vehicula. Class aptent taciti sociosqu ad litora
+                        torquent per conubia nostra, per inceptos himenaeos. Duis vestibulum finibus leo, ut accumsan
+                        dui ultricies id. Quisque et placerat ligula, eu finibus velit. Pellentesque laoreet blandit
+                        tellus in egestas. Nam sollicitudin dolor in lacus tincidunt ullamcorper.</p>
+
+                    <p>Nam lectus ex, placerat at metus eu, mollis eleifend libero. Cum sociis natoque penatibus et
+                        magnis dis parturient montes, nascetur ridiculus mus. Praesent feugiat tempor sapien in
+                        molestie. Donec quis leo suscipit, rhoncus tellus sed, interdum metus. Sed pretium sed mi non
+                        euismod. Nulla accumsan ante eget nunc auctor semper. Curabitur leo turpis, accumsan vitae
+                        lacinia vitae, molestie in neque. Maecenas et posuere enim. Fusce hendrerit congue dolor, eu
+                        lobortis mauris congue a. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                        per inceptos himenaeos. Suspendisse lobortis, felis sed congue sagittis, magna velit feugiat
+                        justo, elementum hendrerit justo ex quis mauris. Sed nisl est, mattis non elit aliquam, iaculis
+                        dapibus tellus. Aenean sit amet bibendum dolor.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>
