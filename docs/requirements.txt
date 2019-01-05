@@ -1,5 +1,5 @@
 click==5.1
-Django==1.8.4
+Django>=1.8.19
 django-background-tasks==1.0.3
 django-bootstrap3==6.2.1
 django-compat==1.0.7
